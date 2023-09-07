@@ -49,6 +49,9 @@ let libros=[
     pages:352
     },
 ]
+
+
+
 //! Tarea 4
 
 //? Agregar un nuevo libro a la colección: Learning JavaScript Design Patterns, por Addy Osmani, 254 páginas. Usa el método apropiado para adjunta el libro al final del arreglo. Muestra la longitud del arreglo y, a su vez, todos los nombres de los libros en la colección.
@@ -67,5 +70,10 @@ for (let i = 0; i < libros.length; i++) {
 }
 //TODO
 //4 tareas pendientes
+//**Ejemplo para más adelante */
+let emojis=['🎉','👀','🤗']
+let emojis2=emojis.filter(element=>element!=='👀')
+console.log(emojis2);
+
 
 

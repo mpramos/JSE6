@@ -35,5 +35,7 @@ console.log(typeof 'maria');
 console.log(typeof 3); 
 console.log(typeof true); 
 
+console.log(3+'4');
+
 
 
