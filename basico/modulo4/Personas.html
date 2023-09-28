@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombres=[]
+        let terminar= false
+
+
+
+        while (!terminar) {
+           let nombre= prompt("Ingresa tu nombre")
+           if (nombre != null) {
+                nombres.push(nombre)
+           } else {
+                terminar= true
+           }
+        }
+        console.log('nombres ',nombres);
+    </script>
+</body>
+</html>
