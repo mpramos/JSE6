@@ -70,7 +70,7 @@ promesa
 .then(resultado => console.log(resultado))
 .catch(error=>console.log(error))
 
-
+//? Cuando la promesa es cumplida
 const promesa2= new Promise((resolve,reject)=>{
     setTimeout(() => {
         const skills=['HTML','CSS','JS']
@@ -84,6 +84,39 @@ const promesa2= new Promise((resolve,reject)=>{
 promesa2
 .then(resultado=>{console.log(resultado)})
 .catch(error=>console.log(error))
+//? La promesa no es cumplida
+const promesa3= new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        const skills=[]
+        if (skills.length>0) {
+            resolve(skills)
+        } else {
+            reject('No cumpli con mi promesa')
+        }
+    }, 2000);
+})
+promesa3
+.then(resultado=>{console.log(resultado)})
+.catch(error=>console.log(error))
 
+
+fetch(url)
+    .then(respuesta=>respuesta.json())
+    .then(data=> {
+        console.log(data);
+    })
+    .catch(error=> console.error(error))
+    
+const url="https://rickandmortyapi.com/api/character"
+const fetchdata= async ()=>{
+    try {
+        const respuesta= await fetch(url)
+        const data =await respuesta.json()
+        console.log(data.results);
+    } catch (error) {
+        console.error(error);
+    }
+}
+fetchdata();
 
 
