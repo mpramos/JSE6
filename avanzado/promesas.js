@@ -82,8 +82,11 @@ const promesa2= new Promise((resolve,reject)=>{
     }, 2000);
 })
 promesa2
-.then(resultado=>{console.log(resultado)})
+.then(resultado=> resultado.map(skill=>skill.toLowerCase()))
+.then(data=> console.log(data))
 .catch(error=>console.log(error))
+
+
 //? La promesa no es cumplida
 const promesa3= new Promise((resolve,reject)=>{
     setTimeout(() => {

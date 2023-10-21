@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="titulo" id="primer-titulo" style="border: 1px solid red;">Primer Titulo</h1>
+    <h1 class="titulo" id="segundo-titulo">Segundo Titulo</h1>
+    <h1 class="titulo" id="tercer-titulo">Tercer Titulo</h1>
+    <h1></h1>
+
+    <script>
+    //   let todosTitulos= document.getElementsByTagName('h1')   
+    //   for(let i = 0; i < todosTitulos.length ;i++){
+    //     console.log(todosTitulos[i]);
+    //   }
+    //   let todosTitulos= document.getElementsByClassName('titulo')   
+    //   for(let i = 0; i < todosTitulos.length ;i++){
+    //     console.log('titulos por clase ',todosTitulos[i]);
+    //   }
+    //   let titulo= document.getElementById('segundo-titulo') 
+    //   console.log(titulo);
+        let todosTitulos= document.querySelectorAll('h1')
+        // todosTitulos[3].className='titulo'
+        // todosTitulos[3].id='cuarto-titulo'
+        todosTitulos[3].setAttribute('class','titulo')
+        todosTitulos[3].setAttribute('id','cuarto-titulo')
+        todosTitulos[3].classList.add('titulo','header-titulo')
+        todosTitulos[3].classList.remove('titulo','header-titulo')
+        todosTitulos[3].textContent='Cuarto Titulo'
+
+        
+        console.log('todosTitulos ',todosTitulos); ///
+        for (let i = 0; i < todosTitulos.length; i++) {
+            const element = todosTitulos[i];
+            console.log('Titulo ... ',element);
+            
+        }
+        let primerTitulo= document.querySelector('#primer-titulo')
+        console.log('primerTitulo ', primerTitulo);
+        let titulosClase= document.querySelectorAll('.titulo')
+        console.log('titulosClase ', titulosClase);
+        for (let i = 0; i < titulosClase.length; i++) {
+            const element = titulosClase[i];
+            console.log('titulosClase ... ',element);
+        }
+        
+
+    </script>
+</body>
+</html>
